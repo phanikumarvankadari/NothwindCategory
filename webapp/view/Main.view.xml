@@ -1,0 +1,18 @@
+<mvc:View controllerName="com.odata.nw.OdataModelSample.controller.Main" xmlns:core="sap.ui.core"
+xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<Select items="{/Categories/}">
+							<items>
+							<core:Item key="{CategoryId}" text="{CategoryName}" />
+							</items>
+						</Select>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
