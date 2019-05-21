@@ -15,28 +15,43 @@ xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
 					
 					
 							
-						<ObjectHeader id="oHCategory"
-							title="{NWM>CategoryName}"
-							number="{NWM>CategoryID}">
-							<attributes>
-								<ObjectAttribute text="{NWM>Description}"/>
-							</attributes>
-							<statuses>
-						      <ObjectStatus
-						        text="{NWM>CategoryName}"
-						        state="Success" />
-						        </statuses>
-						</ObjectHeader>
-						
-						
-						<List id="listPrs">
-							<items>
-								<ObjectItem id="oli" title="{NWM>ProductName}">
-									
-								</ObjectItem>
-							</items>
+					
+				
+				<IconTabBar>
+					<items>
+						<IconTabFilter icon="sap-icon://header">
 							
-						</List>
+								<ObjectHeader id="oHCategory"
+									binding="{/Categories(1)/}"
+									title="{NWM>CategoryName}"
+									number="{NWM>CategoryID}">
+									<attributes>
+										<ObjectAttribute text="{NWM>Description}"/>
+									</attributes>
+									<statuses>
+								      <ObjectStatus
+								        text="{NWM>CategoryName}"
+								        state="Success" />
+								        </statuses>
+								</ObjectHeader>
+						
+						</IconTabFilter>
+						
+						<IconTabFilter icon="sap-icon://product">
+							<List id="listPrs" 
+							items="{
+										path: 'NWM>/Products/'
+									}">
+								
+								<ObjectListItem title="{NWM>ProductName}"></ObjectListItem>
+									
+							</List>
+						</IconTabFilter>
+					</items>
+				</IconTabBar>
+						
+						
+					
 							
 					</content>
 					<footer>
