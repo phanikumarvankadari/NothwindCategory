@@ -5,12 +5,47 @@ xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
 			<pages>
 				<Page id="page" title="{i18n>title}">
 					<content>
-						<Select items="{/Categories/}">
+						<Select items="{path:'NWM>/Categories/'}"
+							change = "onCategoryChange">
 							<items>
-							<core:Item key="{CategoryId}" text="{CategoryName}" />
+							<core:Item key="{NWM>CategoryId}" text="{NWM>CategoryName}" />
 							</items>
 						</Select>
+					
+					
+					
+							
+						<ObjectHeader id="oHCategory"
+							title="{NWM>CategoryName}"
+							number="{NWM>CategoryID}">
+							<attributes>
+								<ObjectAttribute text="{NWM>Description}"/>
+							</attributes>
+							<statuses>
+						      <ObjectStatus
+						        text="{NWM>CategoryName}"
+						        state="Success" />
+						        </statuses>
+						</ObjectHeader>
+						
+						
+						<List id="listPrs">
+							<items>
+								<ObjectItem id="oli" title="{NWM>ProductName}">
+									
+								</ObjectItem>
+							</items>
+							
+						</List>
+							
 					</content>
+					<footer>
+						<Bar>
+							<contentRight>
+								<Button icon="sap-icon://debug" text="dbg" press="debug"></Button>
+							</contentRight>
+						</Bar>
+					</footer>
 				</Page>
 			</pages>
 		</App>

@@ -14,11 +14,18 @@
 			"version": "0.0.0"
 		},
 		"dataSources": {
+			"EPM_REF_APPS_PROD_MAN_SRV": {
+				"uri": "/ES5_SAP_Gateway_CLONING/sap/opu/odata/sap/EPM_REF_APPS_PROD_MAN_SRV/",
+				"type": "OData",
+				"settings": {
+					"localUri": "localService/EPM_REF_APPS_PROD_MAN_SRV/metadata.xml"
+				}
+			},
 			"Northwind.svc": {
 				"uri": "/Northwind/V2/Northwind/Northwind.svc/",
 				"type": "OData",
 				"settings": {
-					"localUri": "localService/metadata.xml"
+					"localUri": "localService/Northwind.svc/metadata.xml"
 				}
 			}
 		}
@@ -66,7 +73,7 @@
 					"bundleName": "com.odata.nw.OdataModelSample.i18n.i18n"
 				}
 			},
-			"": {
+			"NWM": {
 				"type": "sap.ui.model.odata.v2.ODataModel",
 				"settings": {
 					"defaultOperationMode": "Server",

@@ -26,6 +26,15 @@
         "name": "Northwind"
       },
       "description": "Northwind OData services"
+    },
+    {
+      "path": "/sap/opu/odata",
+      "target": {
+        "type": "destination",
+        "name": "ES5_SAP_Gateway_CLONING",
+        "entryPath": "/sap/opu/odata"
+      },
+      "description": "SAP Gateway ES5"
     }
   ],
   "sendWelcomeFileRedirect": true
